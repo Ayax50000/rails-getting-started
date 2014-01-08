@@ -7,6 +7,7 @@ Blog::Application.routes.draw do
   resources :posts
   root to: 'welcome#index'
 
+  get '/posts(.:format)' => 'posts#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -14,6 +15,7 @@ Blog::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
 
   # Example resource route with options:
   #   resources :products do
